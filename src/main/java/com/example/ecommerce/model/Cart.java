@@ -84,12 +84,7 @@ public class Cart {
         onUpdate();
     }
 
-    private CartItem findItemByProduct(Product product) {
-        return items.stream()
-                .filter(item -> item.getProduct().getId().equals(product.getId()))
-                .findFirst()
-                .orElse(null);
-    }
+   
 
     // Constructors
     public Cart() {}
