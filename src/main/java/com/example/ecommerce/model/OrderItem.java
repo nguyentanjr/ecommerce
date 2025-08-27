@@ -60,7 +60,7 @@ public class OrderItem {
     // ✨ Static Factory Methods with descriptive names (moved from OrderItemFactory)
 
     /** Create OrderItem from CartItem */
-    public static OrderItem fromCartItem(Order order, CartItem cartItem) {
+    public static OrderItem fromCartItem(Order order, com.ecommerce.model.CartItem cartItem) {
         return new OrderItem()
                 .setOrder(order)
                 .setProduct(cartItem.getProduct())

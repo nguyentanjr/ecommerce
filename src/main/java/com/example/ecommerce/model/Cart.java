@@ -24,8 +24,6 @@ public class Cart {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<CartItem> items = new ArrayList<>();
 
     @PrePersist
     protected void onCreate() {
@@ -84,7 +82,7 @@ public class Cart {
         onUpdate();
     }
 
-    private CartItem findItemByProduct(Product product) {
+    private com.ecommerce.model.CartItem findItemByProduct(Product product) {
         return items.stream()
                 .filter(item -> item.getProduct().getId().equals(product.getId()))
                 .findFirst()

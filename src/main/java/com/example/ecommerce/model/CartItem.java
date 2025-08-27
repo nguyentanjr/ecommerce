@@ -1,5 +1,7 @@
 package com.ecommerce.model;
 
+import com.example.ecommerce.model.Cart;
+import com.example.ecommerce.model.Product;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
