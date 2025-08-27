@@ -94,8 +94,8 @@ public class Order {
     }
 
     public void addOrderItem(Product product, int quantity, BigDecimal unitPrice) {
-        if()
-        orderItems.add(orderItem);
+       // if()
+        //orderItems.add(orderItem);
     }
 
     public boolean canBeCancelled() {

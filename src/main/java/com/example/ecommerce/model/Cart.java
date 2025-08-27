@@ -24,8 +24,6 @@ public class Cart {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<CartItem> items = new ArrayList<>();
 
     @PrePersist
     protected void onCreate() {
@@ -84,7 +82,6 @@ public class Cart {
         onUpdate();
     }
 
-   
 
     // Constructors
     public Cart() {}

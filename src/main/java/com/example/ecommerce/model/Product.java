@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import com.example.ecommerce.exception.BadRequestException;
-import com.example.ecommerce.InsufficientStockException;
 
 /**
  * Product entity using Static Factory Methods + Lombok annotations
@@ -66,7 +65,7 @@ public class Product {
     private Category category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<CartItem> cartItems;
+    private List<com.ecommerce.model.CartItem> cartItems;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems;
