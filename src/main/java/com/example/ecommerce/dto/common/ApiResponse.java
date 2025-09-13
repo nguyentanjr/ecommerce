@@ -48,7 +48,7 @@ public class ApiResponse<T> {
     /** Create successful creation response */
     public static <T> ApiResponse<T> created(T data) {
         return new ApiResponse<>(true, "Resource created successfully", data,
-                HttpStatus.CREATED.value();
+                HttpStatus.CREATED.value());
     }
 
     /** Create successful creation response with custom message */
